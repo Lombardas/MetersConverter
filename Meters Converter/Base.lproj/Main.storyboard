@@ -31,9 +31,9 @@
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PCi-aj-qlq">
-                                        <rect key="frame" x="128.5" y="102" width="125" height="37"/>
+                                        <rect key="frame" x="105.5" y="102" width="171" height="37"/>
                                         <segments>
-                                            <segment title="Meters"/>
+                                            <segment title="Kilometers"/>
                                             <segment title="Miles"/>
                                         </segments>
                                     </segmentedControl>
