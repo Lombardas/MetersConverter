@@ -42,28 +42,25 @@ class ViewController: UIViewController {
         
         if let textField = Double(distanceTextField.text!)
         {
-            // print("Selected: \(segmentedControl)")
             //0 = meters; 1 = miles
-            
             if unitSystem == 0 {
                 //lets convert to meters
                 let convertedValue = textField * mile
-                
-                
-                
                 labelResult.text = String(format:"%.2f",convertedValue) + " Km"
                 
-            }
-            else
-            {
+            } else {
                 //lets convert to miles
                 let convertedValue = textField / mile
                 labelResult.text = String(format:"%.2f",convertedValue) + " mi"
             }
-            
-            
-        }
+        }// if let - unwrap optional to into a Double
     }
     
 }
 
+/***********DELEGATES & EXTENSIONS***********/
+
+extension ViewController : UITextFieldDelegate {
+    
+    
+}
