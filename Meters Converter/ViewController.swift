@@ -9,14 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var distanceTextField: UITextField!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var labelResult: UILabel!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         //Listos para empezar
         
-        //Prueba Git desde Xcode    
+        
         
     }
+    
+    
+    @IBAction func buttonConvert(_ sender: Any) {
+    }
+    
 }
 
