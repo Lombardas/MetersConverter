@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //Listos para empezar
-        
+        distanceTextField.delegate = self
+        self.hideKeyboardWhentapping()
         
         
     }
@@ -54,6 +55,8 @@ class ViewController: UIViewController {
                 labelResult.text = String(format:"%.2f",convertedValue) + " mi"
             }
         }// if let - unwrap optional to into a Double
+        
+        dismissKeyboard()
     }
     
 }
@@ -62,5 +65,24 @@ class ViewController: UIViewController {
 
 extension ViewController : UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
+
+extension UIViewController {
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func hideKeyboardWhentapping () {
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+       
+        view.addGestureRecognizer(tap)
+        
+    }
     
 }
