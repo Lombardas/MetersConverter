@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         if let textField = Double(distanceTextField.text!)
         {
             //0 = meters; 1 = miles
-            if unitSystem == 0 {
+            if unitSystem == 1 {
                 //lets convert to meters
                 let convertedValue = textField * mile
                 labelResult.text = String(format:"%.2f",convertedValue) + " Km"
